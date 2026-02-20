@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   ArrowRight,
@@ -501,7 +501,7 @@ const Home = () => {
               {
                 title: 'Group X Activities',
                 desc: 'Energetic group classes including Zumba, Yoga, and Crossfit in a social group setting.',
-                image: 'https://images.unsplash.com/photo-1571902251103-d248171d9d4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+                image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
                 tag: 'Fun'
               }
             ].map((item, index) => (
@@ -656,3 +656,4 @@ const Home = () => {
 };
 
 export default Home;
+

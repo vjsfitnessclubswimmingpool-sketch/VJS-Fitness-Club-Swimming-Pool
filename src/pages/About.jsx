@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Users, Target, Trophy, Clock, Heart, CheckCircle2, Star,
@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 import sir from '../Assets/vj-sir.jpg';
+import ownerImg from '../Assets/img owner.jpeg';
 
 const About = () => {
   const [openFaq, setOpenFaq] = useState(null);
@@ -60,7 +61,7 @@ const About = () => {
     {
       name: 'Amit D.',
       role: 'Fitness Freak',
-      quote: 'Not just a gym, it’s a community. The energy here is contagious and motivates you to push your limits every single day.',
+      quote: "Not just a gym, it's a community. The energy here is contagious and motivates you to push your limits every single day.",
       rating: 5
     }
   ];
@@ -114,7 +115,7 @@ const About = () => {
                 </div>
                 <h3 className="text-2xl font-bold mb-4 font-poppins">Our Vision</h3>
                 <p className="text-gray-600 leading-relaxed font-poppins font-normal">
-                  To become Pune’s most trusted and innovative fitness & wellness ecosystem, setting the standard for comprehensive health solutions and inspiring a healthier, happier society.
+                  To become Pune's most trusted and innovative fitness & wellness ecosystem, setting the standard for comprehensive health solutions and inspiring a healthier, happier society.
                 </p>
               </div>
             </ScrollAnimation>
@@ -128,7 +129,7 @@ const About = () => {
           <ScrollAnimation>
             <div className="text-center max-w-4xl mx-auto mb-16">
               <h2 className="text-3xl md:text-5xl font-bold mb-4 font-poppins">
-                Why We’re Balewadi’s <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-600">Preferred Fitness Destination</span>
+                Why We're Balewadi's <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-600">Preferred Fitness Destination</span>
               </h2>
               <p className="text-gray-600 font-poppins font-normal">Building instant authority with excellence in every detail.</p>
             </div>
@@ -237,7 +238,7 @@ const About = () => {
                 Our Approach to <span className="text-transparent bg-clip-text bg-gradient-fitness">Fitness</span>
               </h2>
               <p className="text-lg text-gray-700 mb-8 leading-relaxed font-poppins">
-                We believe fitness is not a short-term challenge — it’s a lifelong commitment. Our holistic approach goes beyond just muscle building to ensure overall well-being.
+                We believe fitness is not a short-term challenge - it's a lifelong commitment. Our holistic approach goes beyond just muscle building to ensure overall well-being.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -343,22 +344,24 @@ const About = () => {
                 name: 'Mr. Vijay Jambhale',
                 role: 'Managing Director',
                 bio: 'With over 15 years in the fitness industry, Mr. Vijay brings expertise and vision to our club.',
-                image: sir
+                image: sir,
+                imageClass: 'object-top'
               },
               {
                 name: 'Dr. Preeti Dhumale',
                 role: 'Operations Director',
                 bio: 'Dr. Preeti ensures smooth operations across all our facilities with attention to detail and excellence.',
-                image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'
+                image: ownerImg,
+                imageClass: 'object-[center_18%]'
               }
             ].map((member, index) => (
               <ScrollAnimation key={index} delay={index * 100}>
                 <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
-                  <div className="relative pb-3/4 w-full h-80">
+                  <div className="relative w-full h-80 md:h-96 bg-gray-100">
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="absolute inset-0 w-full h-full object-cover object-top"
+                      className={`absolute inset-0 w-full h-full object-cover ${member.imageClass || 'object-top'}`}
                     />
                   </div>
                   <div className="p-6 text-center">
@@ -377,7 +380,7 @@ const About = () => {
       <section className="section-padding bg-white">
         <div className="container-custom text-center">
           <ScrollAnimation>
-            <h2 className="text-3xl font-bold mb-6 font-poppins">More Than Members — <span className="text-fitness-purple">We’re a Family</span></h2>
+            <h2 className="text-3xl font-bold mb-6 font-poppins">More Than Members - <span className="text-fitness-purple">We're a Family</span></h2>
             <p className="max-w-3xl mx-auto text-gray-600 mb-12 font-poppins">
               We focus on community retention through fitness events, transformation challenges, member meetups, and health awareness camps. When you join VJS, you join a supportive tribe.
             </p>
@@ -493,3 +496,7 @@ const About = () => {
 };
 
 export default About;
+
+
+
+
